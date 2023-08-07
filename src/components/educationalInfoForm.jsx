@@ -6,11 +6,24 @@ const EducationalInfoForm = ({ onSchoolNameChange, onSchoolLevelChange }) => {
   return (
     <div className="schoolForm">
       <p>
-        School name: <input type="text" name="name" className="schoolName" />
+        School name:{" "}
+        <input
+          type="text"
+          name="name"
+          className="schoolName"
+          onChange={onSchoolNameChange}
+        />
       </p>
       <p>
-        School level: <input type="text" name="level" className="schoolLevel" />
+        School level:{" "}
+        <input
+          type="text"
+          name="level"
+          className="schoolLevel"
+          onChange={onSchoolLevelChange}
+        />
       </p>
     </div>
   );
 };
+export default EducationalInfoForm;

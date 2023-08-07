@@ -1,10 +1,16 @@
+import EducationalInfoForm from "./educationalInfoForm";
 const EditForm = ({
   onNameChange,
   onEmailChange,
   onPhoneChange,
   onCountryChange,
   onAddSchool,
+  schoolNumber,
 }) => {
+  let schoolForms = [];
+  for (let i = 0; i < schoolNumber; i++) {
+    schoolForms.push(<EducationalInfoForm />);
+  }
   return (
     <form>
       <div className="personalInfoForm">
@@ -37,6 +43,7 @@ const EditForm = ({
       </div>
       <div className="educationalInfoForm">
         <button onClick={onAddSchool}>Add school</button>
+        {schoolForms}
       </div>
     </form>
   );

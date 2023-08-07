@@ -20,6 +20,10 @@ function App() {
   const handleCountryChange = (e) => {
     setPersonalInfo({ ...personalInfo, country: e.target.value });
   };
+  const handleAddSchool = (e) => {
+    e.preventDefault();
+    setSchoolNumber(schoolNumber + 1);
+  };
   return (
     <>
       <EditForm
@@ -28,6 +32,7 @@ function App() {
         onCountryChange={handleCountryChange}
         onPhoneChange={handlePhoneChange}
         schoolNumber={schoolNumber}
+        onAddSchool={handleAddSchool}
       />
       <h1>My CV:</h1>
       <PersonalInfo info={personalInfo} />
