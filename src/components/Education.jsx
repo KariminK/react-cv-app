@@ -6,14 +6,10 @@ const Education = ({ info }) => {
         {info.map((element, i) => {
           return (
             <li key={i}>
-              <h3>{element.name}</h3>
+              <h3>{element.name.length != 0 ? element.name : "No name"}</h3>
               <p>Level: {element.level}</p>
-              <p>Special achievements:</p>
-              <ul>
-                {element.specialAchievements.map((achievement, i) => {
-                  return <li key={i}>{achievement}</li>;
-                })}
-              </ul>
+              <p>Start time: {element.startTime}</p>
+              <p>Start time: {element.endTime}</p>
             </li>
           );
         })}
