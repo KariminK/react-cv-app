@@ -1,20 +1,11 @@
-import EditButton from "./partials/EditButton";
-import InfoList from "./partials/InfoList";
-
-const info = {
-  name: "Karimin",
-  email: "xyz@gmail.com",
-  country: "Poland",
-};
-const PersonalInfo = () => {
-  const edit = () => {
-    alert("xzy");
-  };
+const PersonalInfo = ({ info }) => {
   return (
     <div className="personalInfo-section">
       <h2>Basic info:</h2>
-      <InfoList info={info} />
-      <EditButton handleClick={edit} />
+      <p>Name: {info.name}</p>
+      <p>Email: {info.email}</p>
+      <p>Phone number: {info.phone}</p>
+      <p>Country: {info.country}</p>
     </div>
   );
 };
