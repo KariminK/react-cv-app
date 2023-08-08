@@ -6,5 +6,6 @@ const defaultInfo = {
     country: "Poland",
   },
   education: [],
+  workplace: [],
 };
 export default defaultInfo;
