@@ -1,6 +1,7 @@
 import SchoolForm from "./forms/SchoolForm";
 import PersonalInfoForm from "./forms/PersonalInfoForm";
 import WorkplaceForm from "./forms/WorkplaceForm";
+import "../styles/editform.css";
 import { v4 as uuidv4 } from "uuid";
 const EditForm = ({
   onPersonalInfoChange,
@@ -11,6 +12,8 @@ const EditForm = ({
   workplaceNumber,
   onWorkplaceInfoChange,
   onResponsibilitiesChange,
+  onRemoveSchool,
+  onRemoveWorkspace,
 }) => {
   let schoolForms = [];
   for (let i = 0; i < schoolNumber; i++) {
@@ -34,10 +37,13 @@ const EditForm = ({
       <PersonalInfoForm onPersonalInfoChange={onPersonalInfoChange} />
       <div className="educationalInfoForm">
         <button onClick={onAddSchool}>Add school</button>
+        <button onClick={onRemoveSchool}>Remove school</button>
         {schoolForms}
       </div>
       <div className="workplaceInfoForm">
         <button onClick={onAddWorkspace}>Add workplace</button>
+        <button onClick={onRemoveWorkspace}>Remove workplace</button>
+
         {workplaceForms}
       </div>
     </form>

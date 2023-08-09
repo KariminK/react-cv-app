@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PersonalInfo from "./components/PersonalInfo";
-import "./App.css";
 import defaultInfo from "./defaultInfo";
 import EditForm from "./components/EditForm";
 import Education from "./components/Education";
@@ -26,25 +25,36 @@ function App() {
   const [personalInfo, setPersonalInfo] = useState(defaultInfo.personalInfo);
   const [educationalInfo, setEducationalInfo] = useState(defaultInfo.education);
   const [workplaceInfo, setWorkplaceInfo] = useState(defaultInfo.workplace);
-  const [schoolNumber, setSchoolNumber] = useState(0);
-  const [workplaceNumber, setWorkplaceNumber] = useState(0);
   const handlePersonalInfoChange = (e, prop) => {
     setPersonalInfo({ ...personalInfo, [prop]: e.target.value });
   };
   const handleAddSchool = (e) => {
     e.preventDefault();
-    setSchoolNumber(schoolNumber + 1);
     const newEducationalInfo = JSON.parse(JSON.stringify(educationalInfo));
     newEducationalInfo.push(new School());
     setEducationalInfo(newEducationalInfo);
   };
+  const handleRemoveSchool = (e) => {
+    e.preventDefault();
+    if (educationalInfo.length === 0) return;
+    const newEducationalInfo = JSON.parse(JSON.stringify(educationalInfo));
+    newEducationalInfo.pop();
+    setEducationalInfo(newEducationalInfo);
+  };
+  const handleRemoveWorkplace = (e) => {
+    e.preventDefault();
+    if (workplaceInfo.length === 0) return;
+    const newWorkplaceInfo = JSON.parse(JSON.stringify(workplaceInfo));
+    newWorkplaceInfo.pop();
+    setWorkplaceInfo(newWorkplaceInfo);
+  };
   const handleAddWorkplace = (e) => {
     e.preventDefault();
-    setWorkplaceNumber(workplaceNumber + 1);
     const newWorkplaceInfo = JSON.parse(JSON.stringify(workplaceInfo));
     newWorkplaceInfo.push(new Workplace());
     setWorkplaceInfo(newWorkplaceInfo);
   };
+
   const handleSchoolInfoChange = (e, index, prop) => {
     const newEducationalInfo = JSON.parse(JSON.stringify(educationalInfo));
     newEducationalInfo[index][prop] = e.target.value;
@@ -71,13 +81,15 @@ function App() {
     <>
       <EditForm
         onPersonalInfoChange={handlePersonalInfoChange}
-        schoolNumber={schoolNumber}
+        schoolNumber={educationalInfo.length}
         onAddSchool={handleAddSchool}
         onSchoolInfoChange={handleSchoolInfoChange}
-        workplaceNumber={workplaceNumber}
+        workplaceNumber={workplaceInfo.length}
         onAddWorkspace={handleAddWorkplace}
         onWorkplaceInfoChange={handleWorkplaceInfoChange}
         onResponsibilitiesChange={handleResponsibilitiesChange}
+        onRemoveSchool={handleRemoveSchool}
+        onRemoveWorkspace={handleRemoveWorkplace}
       />
       <h1>My CV:</h1>
       <PersonalInfo info={personalInfo} />
