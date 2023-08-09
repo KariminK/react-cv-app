@@ -2,7 +2,6 @@ import SchoolForm from "./forms/SchoolForm";
 import PersonalInfoForm from "./forms/PersonalInfoForm";
 import WorkplaceForm from "./forms/WorkplaceForm";
 import "../styles/editform.css";
-import { v4 as uuidv4 } from "uuid";
 const EditForm = ({
   onPersonalInfoChange,
   onAddSchool,
@@ -38,13 +37,12 @@ const EditForm = ({
       <div className="educationalInfoForm">
         <button onClick={onAddSchool}>Add school</button>
         <button onClick={onRemoveSchool}>Remove school</button>
-        {schoolForms}
+        <div className="schoolForms">{schoolForms}</div>
       </div>
       <div className="workplaceInfoForm">
         <button onClick={onAddWorkspace}>Add workplace</button>
         <button onClick={onRemoveWorkspace}>Remove workplace</button>
-
-        {workplaceForms}
+        <div className="workplaceForms">{workplaceForms}</div>
       </div>
     </form>
   );

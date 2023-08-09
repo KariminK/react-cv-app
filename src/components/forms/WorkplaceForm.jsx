@@ -1,3 +1,4 @@
+import "../../styles/workplaceForm.css";
 const WorkplaceForm = ({
   onWorkplaceInfoChange,
   index,
@@ -29,7 +30,7 @@ const WorkplaceForm = ({
           name="responsibilities"
           className="responsibilities"
           cols="30"
-          rows="10"
+          rows="3"
           onChange={(e) => onResponsibilitiesChange(e, index)}
         ></textarea>
       </p>

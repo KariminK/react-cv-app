@@ -1,3 +1,4 @@
+import "../../styles/schoolform.css";
 const SchoolForm = ({ onSchoolInfoChange, index }) => {
   return (
     <div className="schoolForm">
