@@ -25,7 +25,9 @@ const WorkplaceForm = ({
         />
       </p>
       <p>
-        Responsibilities &#40;separate with a comma and a space&#41;
+        Responsibilities &#40;separate
+        <br />
+        with a comma and a space&#41;
         <textarea
           name="responsibilities"
           className="responsibilities"
