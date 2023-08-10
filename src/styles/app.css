@@ -1,0 +1,12 @@
+.cv{
+    background-color: white;
+    margin-top: 100px;
+    border-top: 10px solid rgb(122, 243, 41);
+}
+.cv h1{
+    text-align: center;
+    font-size: 48px;
+    padding: 20px;
+    color: rgb(9, 13, 3);
+    background-color: rgb(122, 243, 41);
+}

@@ -4,6 +4,7 @@ import defaultInfo from "./defaultInfo";
 import EditForm from "./components/EditForm";
 import Education from "./components/Education";
 import WorkplaceInfo from "./components/WorkplaceInfo";
+import "./styles/app.css";
 class School {
   constructor() {
     this.name = "No name";
@@ -91,10 +92,12 @@ function App() {
         onRemoveSchool={handleRemoveSchool}
         onRemoveWorkspace={handleRemoveWorkplace}
       />
-      <h1>My CV:</h1>
-      <PersonalInfo info={personalInfo} />
-      <Education info={educationalInfo} />
-      <WorkplaceInfo info={workplaceInfo} />
+      <div className="cv">
+        <h1>My CV:</h1>
+        <PersonalInfo info={personalInfo} />
+        <Education info={educationalInfo} />
+        <WorkplaceInfo info={workplaceInfo} />
+      </div>
     </>
   );
 }
