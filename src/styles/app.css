@@ -1,12 +1,33 @@
-.cv{
-    background-color: white;
-    margin-top: 100px;
-    border-top: 10px solid rgb(122, 243, 41);
+.cv {
+  background-color: white;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border: 2px solid rgb(122, 243, 41);
+  box-shadow: 0px 0px 10px rgb(122, 243, 41);
+  max-width: 1500px;
+  margin-inline: auto;
 }
-.cv h1{
-    text-align: center;
-    font-size: 48px;
-    padding: 20px;
-    color: rgb(9, 13, 3);
-    background-color: rgb(122, 243, 41);
+.cv h1 {
+  text-align: center;
+  font-size: 48px;
+  padding: 20px;
+  color: rgb(9, 13, 3);
+  border-bottom: 2px solid gray;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: white;
+  background-color: rgba(21, 23, 21, 0.8);
+  backdrop-filter: blur(1px);
+}
+footer a {
+  color: rgb(122, 243, 41);
 }

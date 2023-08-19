@@ -1,3 +1,4 @@
+import "../styles/education.css";
 const Education = ({ info }) => {
   return (
     <div className="Education-section">
@@ -9,7 +10,7 @@ const Education = ({ info }) => {
               <h3>{element.name.length != 0 ? element.name : "No name"}</h3>
               <p>Level: {element.level}</p>
               <p>Start time: {element.startTime}</p>
-              <p>Start time: {element.endTime}</p>
+              <p>End time: {element.endTime}</p>
             </li>
           );
         })}

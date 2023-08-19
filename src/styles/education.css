@@ -1,0 +1,46 @@
+.Education-section {
+  margin-top: 20px;
+  padding: 0 30px;
+}
+.Education-section ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Education-section li {
+  flex-basis: calc(100% / 3);
+  flex-grow: 1;
+  margin-top: 10px;
+}
+.Education-section h3 {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+}
+.Education-section h3::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  background-color: rgb(122, 243, 41);
+  border-radius: 0px 33px 33px 33px;
+}
+.Education-section p {
+  margin-left: 25px;
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+}
+.Education-section p::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  background-color: orangered;
+  border-radius: 0px 33px 33px 33px;
+}

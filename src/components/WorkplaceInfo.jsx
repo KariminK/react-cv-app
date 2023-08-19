@@ -1,3 +1,4 @@
+import "../styles/workplace.css";
 const WorkplaceInfo = ({ info }) => {
   if (!info || info == []) {
     return (
@@ -10,22 +11,26 @@ const WorkplaceInfo = ({ info }) => {
   return (
     <div className="Workplace-section">
       <h2>Workplaces:</h2>
-      <ul>
+      <ul className="workplace">
         {info.map((element, i) => {
           return (
             <li key={i}>
               <h3>{element.name.length != 0 ? element.name : "No name"}</h3>
-              <p>Position: {element.position}</p>
-              <p>
-                Responsibilities:{" "}
-                {typeof element.responsibilities == "object"
-                  ? element.responsibilities.map((element, i) => {
-                      return <li key={i}>{element}</li>;
-                    })
-                  : element.responsibilities}
-              </p>
-              <p>Start time: {element.startTime}</p>
-              <p>Start time: {element.endTime}</p>
+              <ul className="workplace-details">
+                <li>Position: {element.position}</li>
+                <li>
+                  Responsibilities:{" "}
+                  <ul className="responsibilities-list">
+                    {typeof element.responsibilities == "object"
+                      ? element.responsibilities.map((element, i) => {
+                          return <li key={i}>{element}</li>;
+                        })
+                      : element.responsibilities}
+                  </ul>
+                </li>
+                <li>Start time: {element.startTime}</li>
+                <li>Start time: {element.endTime}</li>
+              </ul>
             </li>
           );
         })}

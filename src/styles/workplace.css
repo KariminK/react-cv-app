@@ -1,0 +1,42 @@
+.Workplace-section {
+  margin-top: 20px;
+  padding: 0 30px;
+}
+.Workplace-section ul {
+  list-style-type: none;
+  margin-left: 20px;
+}
+.workplace {
+  display: flex;
+  flex-wrap: wrap;
+}
+.workplace > li {
+  flex-basis: calc(33%);
+  padding: 10px;
+}
+.workplace-details > li,
+.responsibilities-list li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.Workplace-section h3 {
+  display: flex;
+  align-items: center;
+}
+.Workplace-section h3::before,
+.workplace-details li::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 3px;
+  background-color: rgb(122, 243, 41);
+  border-radius: 0px 33px 33px 33px;
+  margin-right: 5px;
+}
+.workplace-details li::before {
+  background-color: orangered;
+}
+.responsibilities-list li::before {
+  background-color: rgb(110, 9, 9) !important;
+}

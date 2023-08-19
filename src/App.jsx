@@ -98,6 +98,11 @@ function App() {
         <Education info={educationalInfo} />
         <WorkplaceInfo info={workplaceInfo} />
       </div>
+      <footer>
+        <p>
+          Coded by <a href="https://github.com/karimink">Karimin</a>
+        </p>
+      </footer>
     </>
   );
 }

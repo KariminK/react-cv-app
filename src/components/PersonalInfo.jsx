@@ -1,11 +1,14 @@
+import "../styles/personalInfo.css";
 const PersonalInfo = ({ info }) => {
   return (
     <div className="personalInfo-section">
       <h2>Basic info:</h2>
-      <p>Name: {info.name}</p>
-      <p>Email: {info.email}</p>
-      <p>Phone number: {info.phone}</p>
-      <p>Country: {info.country}</p>
+      <ul>
+        <li>Name: {info.name}</li>
+        <li>Email: {info.email}</li>
+        <li>Phone number: {info.phone}</li>
+        <li>Country: {info.country}</li>
+      </ul>
     </div>
   );
 };
